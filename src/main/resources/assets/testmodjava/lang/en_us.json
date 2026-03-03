@@ -1,4 +1,6 @@
 {
   "item.testmodjava.cucumber": "Cucumber",
-  "item.testmodjava.tekno": "oTeknoVA"
+  "item.testmodjava.tekno": "oTeknoVA",
+
+  "block.testmodjava.tekno_block": "oTeknoVA Block"
 }

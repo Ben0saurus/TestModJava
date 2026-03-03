@@ -1,5 +1,6 @@
 package me.benosaurus.testmodjava;
 
+import me.benosaurus.testmodjava.block.ModBlocks;
 import me.benosaurus.testmodjava.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,5 +14,6 @@ public class TestModJava implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
