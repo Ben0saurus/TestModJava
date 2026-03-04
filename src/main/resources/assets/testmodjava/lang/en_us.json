@@ -3,5 +3,8 @@
   "item.testmodjava.tekno": "oTeknoVA",
   "item.testmodjava.disc": "Disc",
 
-  "block.testmodjava.tekno_block": "oTeknoVA Block"
+  "block.testmodjava.tekno_block": "oTeknoVA Block",
+
+  "itemgroup.testmodjava.testmodjava_items": "TestModJava Items",
+  "itemgroup.testmodjava.testmodjava_blocks": "TestModJava Blocks"
 }
