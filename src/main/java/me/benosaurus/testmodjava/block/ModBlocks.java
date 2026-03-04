@@ -4,15 +4,20 @@ import me.benosaurus.testmodjava.TestModJava;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
+import net.minecraft.world.World;
 
 public class ModBlocks {
 
@@ -22,7 +27,20 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.MUD)
-                    .slipperiness(4f)));
+                    .slipperiness(6f)) {
+
+                @Override
+                public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+                    if (random.nextInt(1) == 0) {
+                        double x = pos.getX() + random.nextDouble();
+                        double y = pos.getY() + 1.1;
+                        double z = pos.getZ() + random.nextDouble();
+
+                        world.addParticleClient(ParticleTypes.SMOKE, x, y, z, 0.0, 0.05, 0.0);
+                    }
+                }
+            });
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -43,5 +61,4 @@ public class ModBlocks {
             entries.add(TEKNO_BLOCK);
         });
     }
-
 }

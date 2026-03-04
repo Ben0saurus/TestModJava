@@ -14,6 +14,8 @@ public class ModItems {
 
     public static final Item CUCUMBER = registerItem("cucumber",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"cucumber")))));
+    public static final Item DISC = registerItem("disc",new Item(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"disc")))));
     public static final Item TEKNO = registerItem("tekno",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"tekno")))));
 
@@ -30,6 +32,9 @@ public class ModItems {
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(TEKNO);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(DISC);
         });
     }
 
