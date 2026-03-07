@@ -16,6 +16,8 @@ public class TestModJava implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 
+		PlayerBlockDetector.register();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}
