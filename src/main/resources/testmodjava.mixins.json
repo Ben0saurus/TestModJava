@@ -3,7 +3,7 @@
 	"package": "me.benosaurus.testmodjava.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"SlipperinessMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
