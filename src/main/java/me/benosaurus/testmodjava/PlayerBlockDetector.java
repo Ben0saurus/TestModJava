@@ -6,9 +6,9 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Position;
 
 public class PlayerBlockDetector{
 
@@ -25,20 +25,19 @@ public class PlayerBlockDetector{
         BlockPos blockBelow = playerPos.down();
         Block block = player.getEntityWorld().getBlockState(blockBelow).getBlock();
 
-        if (block == Blocks.GRASS_BLOCK) {
-            if (!player.hasStatusEffect(StatusEffects.SPEED)) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 60, 2));
-            }
-        } else {
-            player.removeStatusEffect(StatusEffects.SPEED);
-        }
+        addBlockEffect(player, block, Blocks.GRASS_BLOCK, StatusEffects.SPEED, 2);
+        addBlockEffect(player, block, Blocks.STONE, StatusEffects.BLINDNESS, 0);
+        addBlockEffect(player, block, Blocks.SLIME_BLOCK, StatusEffects.GLOWING, 0);
+    }
 
-        if (block == Blocks.STONE) {
-            if (!player.hasStatusEffect(StatusEffects.BLINDNESS)) {
-                player.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 60));
+    private static void addBlockEffect(ServerPlayerEntity player, Block block, Block targetBlock,
+                                       RegistryEntry<StatusEffect> statusEffect, int amplifier) {
+        if (block == targetBlock) {
+            if (!player.hasStatusEffect(statusEffect)) {
+                player.addStatusEffect(new StatusEffectInstance(statusEffect, 60, amplifier));
             }
         } else {
-            player.removeStatusEffect(StatusEffects.BLINDNESS);
+            player.removeStatusEffect(statusEffect);
         }
     }
 
