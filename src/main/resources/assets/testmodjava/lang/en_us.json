@@ -4,6 +4,8 @@
   "item.testmodjava.disc": "Disc",
 
   "block.testmodjava.tekno_block": "oTeknoVA Block",
+  "block.testmodjava.counter_block": "Counter Block",
+  "block.testmodjava.snitching_block": "Snitching Block",
 
   "itemgroup.testmodjava.testmodjava_items": "TestModJava Items",
   "itemgroup.testmodjava.testmodjava_blocks": "TestModJava Blocks"

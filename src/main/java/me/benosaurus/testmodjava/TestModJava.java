@@ -1,10 +1,12 @@
 package me.benosaurus.testmodjava;
 
+import me.benosaurus.testmodjava.block.ModBlockEntities;
 import me.benosaurus.testmodjava.block.ModBlocks;
 import me.benosaurus.testmodjava.item.ModItemGroups;
 import me.benosaurus.testmodjava.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,5 +22,6 @@ public class TestModJava implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModBlockEntities.registerBlockEntities();
 	}
 }

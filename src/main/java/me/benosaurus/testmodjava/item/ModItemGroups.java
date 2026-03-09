@@ -33,6 +33,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) ->  {
 
                         entries.add(ModBlocks.TEKNO_BLOCK);
+                        entries.add(ModBlocks.COUNTER_BLOCK);
 
                     }).build());
 

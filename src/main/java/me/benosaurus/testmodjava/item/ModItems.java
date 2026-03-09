@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item CUCUMBER = registerItem("cucumber",new Item(new Item.Settings()
+    public static final Item CUCUMBER = registerItem("cucumber", new IceStaff(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"cucumber")))));
     public static final Item DISC = registerItem("disc",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"disc")))));
