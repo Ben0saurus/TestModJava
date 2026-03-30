@@ -2,6 +2,8 @@ package me.benosaurus.testmodjava.item;
 
 import me.benosaurus.testmodjava.TestModJava;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.minecraft.item.FuelRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -36,6 +38,12 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(DISC);
         });
+
+        //FUEL
+        FuelRegistryEvents.BUILD.register((builder, context) -> {
+            builder.add(CUCUMBER, 200);
+        });
     }
+
 
 }

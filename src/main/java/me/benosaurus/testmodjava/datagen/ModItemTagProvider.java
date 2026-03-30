@@ -2,10 +2,8 @@ package me.benosaurus.testmodjava.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
-import org.jspecify.annotations.Nullable;
 import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
@@ -24,5 +22,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
                 .add(Identifier.of("testmodjava", "disc"));
+
+        getTagBuilder(ItemTags.FURNACE_MINECART_FUEL)
+                .add(Identifier.of("testmodjava", "cucumber"));
     }
 }
