@@ -34,6 +34,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.TEKNO_BLOCK);
                         entries.add(ModBlocks.COUNTER_BLOCK);
+                        entries.add(ModBlocks.SNITCHING_BLOCK);
+                        entries.add(ModBlocks.SPAWNER_BLOCK);
 
                     }).build());
 
