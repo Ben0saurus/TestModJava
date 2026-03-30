@@ -1,10 +1,10 @@
 package me.benosaurus.testmodjava.datagen;
 
-import me.benosaurus.testmodjava.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -15,8 +15,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        // Note the "getOrCreate" prefix!
-        //getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-        //        .add(ModBlocks.TEKNO_BLOCK);
+        getTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(Identifier.of("testmodjava", "tekno_block"))
+                .add(Identifier.of("testmodjava", "spawner_block"))
+                .add(Identifier.of("testmodjava", "counter_block"))
+                .add(Identifier.of("testmodjava", "snitching_block"));
+
+        getTagBuilder(BlockTags.AXOLOTLS_SPAWNABLE_ON)
+                .add(Identifier.of("testmodjava", "tekno_block"));
+
     }
 }
