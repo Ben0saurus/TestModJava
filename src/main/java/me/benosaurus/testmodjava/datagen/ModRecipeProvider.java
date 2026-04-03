@@ -4,12 +4,10 @@ import me.benosaurus.testmodjava.block.ModBlocks;
 import me.benosaurus.testmodjava.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.block.Block;
 import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.StonecuttingRecipeJsonBuilder;
-import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -54,7 +52,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 //Smelt Tekno -> Cucumber
                 CookingRecipeJsonBuilder.createSmelting(
-                                Ingredient.ofItems(ModItems.TEKNO),
+                                Ingredient.ofItems(ModItems.CUCUMBER),
                                 RecipeCategory.MISC,
                                 ModItems.CUCUMBER,
                                 0.7f,

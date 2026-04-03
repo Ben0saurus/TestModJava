@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DISC);
                         entries.add(ModItems.CUCUMBER);
                         entries.add(ModItems.TEKNO);
+                        entries.add(ModItems.ICE_STAFF);
 
                     }).build());
 

@@ -1,9 +1,10 @@
 package me.benosaurus.testmodjava.item;
 
 import me.benosaurus.testmodjava.TestModJava;
+import me.benosaurus.testmodjava.item.custom.IceStaff;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
-import net.minecraft.item.FuelRegistry;
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -14,11 +15,15 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item CUCUMBER = registerItem("cucumber", new IceStaff(new Item.Settings()
+    public static FoodComponent tekno = new FoodComponent(2, 0.3f, true);
+
+    public static final Item ICE_STAFF = registerItem("ice_staff", new IceStaff(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"ice_staff")))));
+    public static final Item CUCUMBER = registerItem("cucumber",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"cucumber")))));
     public static final Item DISC = registerItem("disc",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"disc")))));
-    public static final Item TEKNO = registerItem("tekno",new Item(new Item.Settings()
+    public static final Item TEKNO = registerItem("tekno",new Item(new Item.Settings().food(tekno)
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"tekno")))));
 
     private static Item registerItem(String name, Item item) {

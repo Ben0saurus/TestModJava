@@ -26,5 +26,6 @@ public class ModModelProvider extends FabricModelProvider {
             itemModelGenerator.register(ModItems.CUCUMBER, Models.GENERATED);
             itemModelGenerator.register(ModItems.DISC, Models.GENERATED);
             itemModelGenerator.register(ModItems.TEKNO, Models.GENERATED);
+            itemModelGenerator.register(ModItems.ICE_STAFF, Models.GENERATED);
     }
 }

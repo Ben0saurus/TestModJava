@@ -2,10 +2,14 @@ package me.benosaurus.testmodjava;
 
 import me.benosaurus.testmodjava.block.ModBlockEntities;
 import me.benosaurus.testmodjava.block.ModBlocks;
+import me.benosaurus.testmodjava.entity.ModEntities;
+import me.benosaurus.testmodjava.entity.custom.JulyEntity;
+import me.benosaurus.testmodjava.entity.custom.OllieEntity;
 import me.benosaurus.testmodjava.item.ModItemGroups;
 import me.benosaurus.testmodjava.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,11 +21,14 @@ public class TestModJava implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
-
-		PlayerBlockDetector.register();
-
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 		ModBlockEntities.registerBlockEntities();
+
+		ModEntities.registerModEntities();
+
+		FabricDefaultAttributeRegistry.register(ModEntities.JULY, JulyEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.OLLIE, OllieEntity.createAttributes());
 	}
 }

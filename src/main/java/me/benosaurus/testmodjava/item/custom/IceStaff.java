@@ -1,5 +1,6 @@
-package me.benosaurus.testmodjava.item;
+package me.benosaurus.testmodjava.item.custom;
 
+import me.benosaurus.testmodjava.item.ModItems;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -30,8 +31,8 @@ public class IceStaff extends Item {
 
         ServerTickEvents.END_SERVER_TICK.register(server -> {
             for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
-                boolean holdingItem = player.getMainHandStack().getItem() == ModItems.CUCUMBER
-                        || player.getOffHandStack().getItem() == ModItems.CUCUMBER;
+                boolean holdingItem = player.getMainHandStack().getItem() == ModItems.ICE_STAFF
+                        || player.getOffHandStack().getItem() == ModItems.ICE_STAFF;
 
                 if (holdingItem && isEnabledFor(player)) {
                     doIceEffect(player);
