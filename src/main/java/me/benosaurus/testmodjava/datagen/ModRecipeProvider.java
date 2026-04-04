@@ -8,6 +8,7 @@ import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.StonecuttingRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
@@ -43,6 +44,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('T', ModItems.TEKNO)
                         .criterion(hasItem(ModItems.TEKNO), conditionsFromItem(ModItems.TEKNO))
                         .offerTo(exporter);
+
+                // Boost Disc
+                createShaped(RecipeCategory.MISC, ModItems.BOOST_ITEM)
+                        .pattern(" X ")
+                        .pattern(" X ")
+                        .pattern("XXX")
+                        .input('X', Items.LILY_OF_THE_VALLEY)
+                        .criterion(hasItem(Items.LILY_OF_THE_VALLEY), conditionsFromItem(Items.LILY_OF_THE_VALLEY))
+                        .offerTo(exporter);
+
+
 
                 //Tekno
                 createShapeless(RecipeCategory.MISC, ModItems.TEKNO, 9)

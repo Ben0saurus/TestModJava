@@ -23,6 +23,7 @@ public class ModItemGroups {
                         entries.add(ModItems.CUCUMBER);
                         entries.add(ModItems.TEKNO);
                         entries.add(ModItems.ICE_STAFF);
+                        entries.add(ModItems.BOOST_ITEM);
 
                     }).build());
 

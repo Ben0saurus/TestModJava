@@ -25,9 +25,9 @@ public class PlayerBlockDetector{
         BlockPos blockBelow = playerPos.down();
         Block block = player.getEntityWorld().getBlockState(blockBelow).getBlock();
 
-        addBlockEffect(player, block, Blocks.GRASS_BLOCK, StatusEffects.SPEED, 2);
-        addBlockEffect(player, block, Blocks.STONE, StatusEffects.BLINDNESS, 0);
-        addBlockEffect(player, block, Blocks.SLIME_BLOCK, StatusEffects.GLOWING, 0);
+        //addBlockEffect(player, block, Blocks.GRASS_BLOCK, StatusEffects.SPEED, 2);
+        //addBlockEffect(player, block, Blocks.STONE, StatusEffects.BLINDNESS, 0);
+        //addBlockEffect(player, block, Blocks.SLIME_BLOCK, StatusEffects.GLOWING, 0);
     }
 
     private static void addBlockEffect(ServerPlayerEntity player, Block block, Block targetBlock,

@@ -14,6 +14,6 @@ public class SlipperinessMixin {
 
 
 	private void blockSlipperiness(CallbackInfoReturnable<Float> info) {
-		info.setReturnValue(0.98f);
+		//info.setReturnValue(0.98f);
 	}
 }

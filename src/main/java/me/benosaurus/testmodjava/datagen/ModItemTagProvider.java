@@ -19,7 +19,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Identifier.of("testmodjava", "cucumber"))
                 .add(Identifier.of("testmodjava", "disc"))
                 .add(Identifier.of("testmodjava", "tekno"))
-                .add(Identifier.of("testmodjava", "ice_staff"));
+                .add(Identifier.of("testmodjava", "ice_staff"))
+                .add(Identifier.of("testmodjava", "boost_item"));
 
         getTagBuilder(ItemTags.CREEPER_DROP_MUSIC_DISCS)
                 .add(Identifier.of("testmodjava", "disc"));

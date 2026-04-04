@@ -1,6 +1,7 @@
 package me.benosaurus.testmodjava.item;
 
 import me.benosaurus.testmodjava.TestModJava;
+import me.benosaurus.testmodjava.item.custom.BoostItem;
 import me.benosaurus.testmodjava.item.custom.IceStaff;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
@@ -19,6 +20,9 @@ public class ModItems {
 
     public static final Item ICE_STAFF = registerItem("ice_staff", new IceStaff(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"ice_staff")))));
+    public static final Item BOOST_ITEM = registerItem("boost_item", new BoostItem(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"boost_item")))));
+
     public static final Item CUCUMBER = registerItem("cucumber",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"cucumber")))));
     public static final Item DISC = registerItem("disc",new Item(new Item.Settings()
