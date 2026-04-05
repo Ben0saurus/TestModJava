@@ -1,10 +1,7 @@
 package me.benosaurus.testmodjava.block;
 
 import me.benosaurus.testmodjava.TestModJava;
-import me.benosaurus.testmodjava.block.blocks.CounterBlock;
-import me.benosaurus.testmodjava.block.blocks.SnitchingBlock;
-import me.benosaurus.testmodjava.block.blocks.SpawnerBlock;
-import me.benosaurus.testmodjava.block.blocks.TeknoBlock;
+import me.benosaurus.testmodjava.block.blocks.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -22,6 +19,7 @@ public class ModBlocks {
     public static final Block TEKNO_BLOCK = registerBlock(TeknoBlock.NAME, new TeknoBlock());
     public static final Block SPAWNER_BLOCK = registerBlock(SpawnerBlock.NAME, new SpawnerBlock());
     public static final Block COUNTER_BLOCK = registerBlock(CounterBlock.NAME, new CounterBlock());
+    public static final Block XP_BANK_BLOCK = registerBlock(XPBankBlock.NAME, new XPBankBlock());
     public static final Block SNITCHING_BLOCK = registerSnitchingBlock();
 
     private static Block registerBlock(String name, Block block) {

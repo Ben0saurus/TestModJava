@@ -19,7 +19,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Identifier.of("testmodjava", "tekno_block"))
                 .add(Identifier.of("testmodjava", "spawner_block"))
                 .add(Identifier.of("testmodjava", "counter_block"))
-                .add(Identifier.of("testmodjava", "snitching_block"));
+                .add(Identifier.of("testmodjava", "snitching_block"))
+                .add(Identifier.of("testmodjava", "xp_bank_block"));
 
         getTagBuilder(BlockTags.AXOLOTLS_SPAWNABLE_ON)
                 .add(Identifier.of("testmodjava", "tekno_block"));

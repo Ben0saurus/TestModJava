@@ -19,6 +19,7 @@ public class ModModelProvider extends FabricModelProvider {
             blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPAWNER_BLOCK);
             blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SNITCHING_BLOCK);
             blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COUNTER_BLOCK);
+            blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.XP_BANK_BLOCK);
     }
 
     @Override
@@ -28,5 +29,6 @@ public class ModModelProvider extends FabricModelProvider {
             itemModelGenerator.register(ModItems.TEKNO, Models.GENERATED);
             itemModelGenerator.register(ModItems.ICE_STAFF, Models.GENERATED);
             itemModelGenerator.register(ModItems.BOOST_ITEM, Models.GENERATED);
+            itemModelGenerator.register(ModItems.PARTICLE_ITEM, Models.GENERATED);
     }
 }

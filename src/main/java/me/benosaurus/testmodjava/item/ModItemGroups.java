@@ -24,6 +24,7 @@ public class ModItemGroups {
                         entries.add(ModItems.TEKNO);
                         entries.add(ModItems.ICE_STAFF);
                         entries.add(ModItems.BOOST_ITEM);
+                        entries.add(ModItems.PARTICLE_ITEM);
 
                     }).build());
 
@@ -38,6 +39,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.COUNTER_BLOCK);
                         entries.add(ModBlocks.SNITCHING_BLOCK);
                         entries.add(ModBlocks.SPAWNER_BLOCK);
+                        entries.add(ModBlocks.XP_BANK_BLOCK);
 
                     }).build());
 

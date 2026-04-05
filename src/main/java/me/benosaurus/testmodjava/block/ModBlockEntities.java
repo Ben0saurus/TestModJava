@@ -13,6 +13,7 @@ public class ModBlockEntities {
 
     public static BlockEntityType<CounterBlockEntity> COUNTER_BLOCK_ENTITY;
     public static BlockEntityType<SnitchingBlockEntity> SNITCHING_BLOCK_ENTITY;
+    public static BlockEntityType<SnitchingBlockEntity> XP_BANK_BLOCK_ENTITY;
 
     public static void registerBlockEntities() {
         COUNTER_BLOCK_ENTITY = Registry.register(
@@ -25,6 +26,12 @@ public class ModBlockEntities {
                 Registries.BLOCK_ENTITY_TYPE,
                 Identifier.of(TestModJava.MOD_ID, "snitching_block_entity"),
                 FabricBlockEntityTypeBuilder.create(SnitchingBlockEntity::new, ModBlocks.SNITCHING_BLOCK).build()
+        );
+
+        XP_BANK_BLOCK_ENTITY = Registry.register(
+                Registries.BLOCK_ENTITY_TYPE,
+                Identifier.of(TestModJava.MOD_ID, "xp_bank_block_entity"),
+                FabricBlockEntityTypeBuilder.create(SnitchingBlockEntity::new, ModBlocks.XP_BANK_BLOCK).build()
         );
     }
 }

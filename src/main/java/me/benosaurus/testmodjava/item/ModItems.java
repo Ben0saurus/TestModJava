@@ -3,6 +3,7 @@ package me.benosaurus.testmodjava.item;
 import me.benosaurus.testmodjava.TestModJava;
 import me.benosaurus.testmodjava.item.custom.BoostItem;
 import me.benosaurus.testmodjava.item.custom.IceStaff;
+import me.benosaurus.testmodjava.item.custom.ParticleItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.component.type.FoodComponent;
@@ -22,6 +23,8 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"ice_staff")))));
     public static final Item BOOST_ITEM = registerItem("boost_item", new BoostItem(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"boost_item")))));
+    public static final Item PARTICLE_ITEM = registerItem("particle_item", new ParticleItem(new Item.Settings()
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"particle_item")))));
 
     public static final Item CUCUMBER = registerItem("cucumber",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"cucumber")))));
