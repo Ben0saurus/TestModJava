@@ -2,6 +2,7 @@ package me.benosaurus.testmodjava;
 
 import me.benosaurus.testmodjava.block.ModBlockEntities;
 import me.benosaurus.testmodjava.block.ModBlocks;
+import me.benosaurus.testmodjava.effect.ModEffects;
 import me.benosaurus.testmodjava.entity.ModEntities;
 import me.benosaurus.testmodjava.entity.custom.JulyEntity;
 import me.benosaurus.testmodjava.entity.custom.OllieEntity;
@@ -26,6 +27,8 @@ public class TestModJava implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModEffects.registerEffects();
 
 		ModBlockEntities.registerBlockEntities();
 

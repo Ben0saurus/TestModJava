@@ -11,6 +11,8 @@
   "block.testmodjava.spawner_block": "TestModJava Spawner",
   "block.testmodjava.xp_bank_block": "XP Bank",
 
+  "effect.testmodjava.vampire": "Vampire Effect",
+
   "itemgroup.testmodjava.testmodjava_items": "TestModJava Items",
   "itemgroup.testmodjava.testmodjava_blocks": "TestModJava Blocks"
 }
