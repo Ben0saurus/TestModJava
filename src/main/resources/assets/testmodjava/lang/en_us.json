@@ -13,6 +13,10 @@
 
   "effect.testmodjava.vampire": "Vampire Effect",
 
+  "item.minecraft.potion.effect.vampire_potion": "Vampire Potion",
+  "item.minecraft.splash_potion.effect.vampire_potion": "Vampire Splash Potion",
+  "item.minecraft.lingering_potion.effect.vampire_potion": "Vampire Lingering Potion",
+
   "itemgroup.testmodjava.testmodjava_items": "TestModJava Items",
   "itemgroup.testmodjava.testmodjava_blocks": "TestModJava Blocks"
 }

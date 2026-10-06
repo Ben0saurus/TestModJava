@@ -10,11 +10,15 @@ import me.benosaurus.testmodjava.item.ModItemGroups;
 import me.benosaurus.testmodjava.item.ModItems;
 import me.benosaurus.testmodjava.particle.ModParticles;
 import me.benosaurus.testmodjava.particle.TestParticle;
+import me.benosaurus.testmodjava.potion.ModPotions;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.potion.Potions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +33,7 @@ public class TestModJava implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 
 		ModBlockEntities.registerBlockEntities();
 
@@ -39,5 +44,9 @@ public class TestModJava implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.JULY, JulyEntity.createAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.OLLIE, OllieEntity.createAttributes());
+
+		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
+			builder.registerPotionRecipe(Potions.AWKWARD, Items.JACK_O_LANTERN, ModPotions.VAMPIRE_POTION);
+		});
 	}
 }
