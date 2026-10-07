@@ -4,6 +4,7 @@ import me.benosaurus.testmodjava.TestModJava;
 import me.benosaurus.testmodjava.item.custom.BoostItem;
 import me.benosaurus.testmodjava.item.custom.IceStaff;
 import me.benosaurus.testmodjava.item.custom.ParticleItem;
+import me.benosaurus.testmodjava.item.food.Garlic;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.minecraft.component.type.FoodComponent;
@@ -17,8 +18,6 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static FoodComponent tekno = new FoodComponent(2, 0.3f, true);
-
     public static final Item ICE_STAFF = registerItem("ice_staff", new IceStaff(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"ice_staff")))));
     public static final Item BOOST_ITEM = registerItem("boost_item", new BoostItem(new Item.Settings()
@@ -30,8 +29,11 @@ public class ModItems {
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"cucumber")))));
     public static final Item DISC = registerItem("disc",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"disc")))));
-    public static final Item TEKNO = registerItem("tekno",new Item(new Item.Settings().food(tekno)
+    public static final Item TEKNO = registerItem("tekno",new Item(new Item.Settings()
             .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"tekno")))));
+
+    public static final Item GARLIC = registerItem("garlic", new Garlic(new Item.Settings().food(ModFoodComponents.GARLIC)
+            .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestModJava.MOD_ID,"garlic")))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TestModJava.MOD_ID, name), item);
@@ -42,7 +44,7 @@ public class ModItems {
         TestModJava.LOGGER.info("Registering Mod Items for " + TestModJava.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
-            entries.add(CUCUMBER);
+            entries.add(GARLIC);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
             entries.add(TEKNO);

@@ -2,9 +2,13 @@ package me.benosaurus.testmodjava.item;
 
 import me.benosaurus.testmodjava.TestModJava;
 import me.benosaurus.testmodjava.block.ModBlocks;
+import me.benosaurus.testmodjava.potion.ModPotions;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
+import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -42,6 +46,22 @@ public class ModItemGroups {
                         entries.add(ModBlocks.XP_BANK_BLOCK);
 
                     }).build());
+
+    public static ItemGroup HALLOWEEN_STUFF   = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TestModJava.MOD_ID, "halloween_stuff"),
+            FabricItemGroup.builder()
+                    .icon(() -> new ItemStack(Blocks.JACK_O_LANTERN))
+                    .displayName(Text.translatable("itemgroup.testmodjava.testmodjava_blocks"))
+                    .entries((displayContext, entries) ->  {
+
+                        entries.add(ModItems.GARLIC);
+
+                        entries.add(PotionContentsComponent.createStack(Items.POTION, ModPotions.VAMPIRE_POTION));
+                        entries.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, ModPotions.VAMPIRE_POTION));
+                        entries.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, ModPotions.VAMPIRE_POTION));
+
+                    }).build());
+
 
 
     public static void registerItemGroups() {

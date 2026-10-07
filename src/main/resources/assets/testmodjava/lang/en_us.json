@@ -5,6 +5,8 @@
   "item.testmodjava.ice_staff": "Ice Staff",
   "item.testmodjava.boost_item": "Boost",
 
+  "item.testmodjava.garlic": "Garlic",
+
   "block.testmodjava.tekno_block": "oTeknoVA Block",
   "block.testmodjava.counter_block": "Counter Block",
   "block.testmodjava.snitching_block": "Snitching Block",
@@ -13,10 +15,11 @@
 
   "effect.testmodjava.vampire": "Vampire Effect",
 
-  "item.minecraft.potion.effect.vampire_potion": "Vampire Potion",
-  "item.minecraft.splash_potion.effect.vampire_potion": "Vampire Splash Potion",
-  "item.minecraft.lingering_potion.effect.vampire_potion": "Vampire Lingering Potion",
+  "item.minecraft.potion.effect.vampire": "Vampire Potion",
+  "item.minecraft.splash_potion.effect.vampire": "Vampire Splash Potion",
+  "item.minecraft.lingering_potion.effect.vampire": "Vampire Lingering Potion",
 
   "itemgroup.testmodjava.testmodjava_items": "TestModJava Items",
-  "itemgroup.testmodjava.testmodjava_blocks": "TestModJava Blocks"
+  "itemgroup.testmodjava.testmodjava_blocks": "TestModJava Blocks",
+  "itemgroup.testmodjava.halloween_stuff": "Halloween Stuff"
 }
